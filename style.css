@@ -64,9 +64,11 @@ body {
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start; /* Mengumpulkan menu dari sebelah kiri */
-    gap: 895px;                   /* Mengatur jarak antara Beranda dan Menu */
-    margin-left: 50px;           /* Membuat Beranda AGAK MENJOROK ke kanan */
+    justify-content: space-between; /* Membuat jarak otomatis memenuhi ruang */
+    width: 100%;                   /* Pastikan lebar container penuh */
+    padding-left: 50px;            /* Ganti margin-left dengan padding jika perlu */
+    padding-right: 50px;
+    box-sizing: border-box;
 }
 
 .nav-links a {
