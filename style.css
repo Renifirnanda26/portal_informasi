@@ -1,0 +1,145 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #b8a666; /* Warna latar belakang hijau muda */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Kotak Putih Utama (Diperbesar) */
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1200px; /* Diperbesar dari ukuran standar */
+    padding: 45px 50px; /* Padding dalam diperbesar */
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Header & Navbar */
+.navbar {
+    display: flex;
+    flex-direction: column; /* Mengubah posisi agar menu pindah ke BAWAH judul */
+    align-items: flex-start; /* Mengatur rata kiri (atau gunakan 'center' jika ingin di tengah) */
+    gap: 15px;              /* Jarak antara judul dan menu navigasi */
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Jarak antara logo dan teks h1 */
+}
+
+.logo {
+    width: 100px;       /* Lebar logo */
+    height: 100px;      /* Tinggi logo */
+    object-fit: contain;
+}
+/* ========================================================= */
+
+.navbar h1 {
+    font-size: 1.6rem;
+    color: #0d1b1e;
+    font-weight: 700;
+}
+
+.navbar h1 {
+    font-size: 1.6rem;
+    color: #0d1b1e;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* Mengumpulkan menu dari sebelah kiri */
+    gap: 895px;                   /* Mengatur jarak antara Beranda dan Menu */
+    margin-left: 50px;           /* Membuat Beranda AGAK MENJOROK ke kanan */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1b4d3e;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #d4a706;
+}
+
+/* Layout Konten / Cards Grid */
+.content {
+    margin: 40px 0;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom berdampingan */
+    gap: 25px;
+}
+
+/* Kartu Berita / Card */
+.card {
+    background-color: #b8a666; /* Hijau pudar lembut */
+    border: 1px solid #c8e0d0;
+    border-radius: 12px;
+    padding: 35px 30px; /* Padding dalam kartu diperbesar */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    color: #000000;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    padding-top: 25px;
+    border-top: 1px solid #e5e5e5;
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* Responsif untuk Layar HP */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr; /* Jadi 1 kolom di layar kecil */
+    }
+}
